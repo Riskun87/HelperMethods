@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using HelperMethods.Infrastructure;
+using HelperMethods.Models;
 
 namespace HelperMethods
 {
@@ -13,6 +15,9 @@ namespace HelperMethods
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //ValueProviderFactories.Factories.Insert(0, new CustomValueProviderFactory());
+            //ModelBinders.Binders.Add(typeof(AddressSummary), new AdressSummaryBinder());
         }
     }
 }

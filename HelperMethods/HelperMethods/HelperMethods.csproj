@@ -141,11 +141,16 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModelBindingController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AdressSummaryBinder.cs" />
+    <Compile Include="Infrastructure\CountryValueProvider.cs" />
     <Compile Include="Infrastructure\CustomHelpers.cs" />
+    <Compile Include="Infrastructure\CustomValueProviderFactory.cs" />
+    <Compile Include="Models\AddressSummary.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,6 +168,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\ModelBinding\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\ModelBinding\CreatePerson.cshtml" />
+    <Content Include="Views\ModelBinding\DisplaySummary.cshtml" />
+    <Content Include="Views\ModelBinding\Names.cshtml" />
+    <Content Include="Views\ModelBinding\NamesCollection.cshtml" />
+    <Content Include="Views\ModelBinding\Address.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
